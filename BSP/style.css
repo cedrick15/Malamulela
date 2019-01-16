@@ -1,0 +1,66 @@
+﻿body {
+}
+.labelstyle {
+    width: 300px;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: small;
+}
+.headings {
+    width: 400px;
+    font-weight: bold;
+    font-family: Arial;
+    font-size:medium;
+}
+.textboxstyle{
+    font-family:Arial;
+    width:325px;
+}
+.dropdownstyle {
+    width: 325px;
+    font-family: Arial;
+    font-size: small;
+}
+.spanstyle{
+    color:red;
+}
+.requiredvalidator{
+    color:red;
+    font-family:Arial;
+    font-size:small;
+    font-weight:bold;
+}
+.tablesize{
+}
+.Topcolumn1, .Topcolum2, .Topcolum3 {
+    border-top-style: dashed;
+    border-top-width: thin;
+    border-top-color: black;
+    width: 340px;
+    padding-left: 15px;
+    background-color: #F2F3F4;
+}
+
+.columnborderbottomstyle {
+    border-bottom-style: dashed;
+    border-bottom-width: thin;
+    border-bottom-color: black;
+}
+.gridAlternativeRowStyle {
+    background-color: #EAEAEA;
+}
+.gridHeaderStyle {
+    font-family: Arial;
+    font-size: small;
+    font-weight:bold;
+    background-color:#C2D69B;
+}
+.gridItemStyle {
+    font-family: Arial;
+    font-size: small;
+}
+.gridviewSize {
+    font-family: Arial;
+    font-size: small;
+}
+

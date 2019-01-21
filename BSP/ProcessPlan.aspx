@@ -8,8 +8,10 @@
     <link href="bootstrap.css" rel="stylesheet" />
     <link href="sb-admin-2.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
-	 
+	
+	
 
+	</script>
 	
 </head>
 <body>
@@ -67,13 +69,16 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Organizational Per Reports<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Flot Charts</a>
+                                    <a href="Quarterly.aspx">Quarterly Performance</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Morris.js Charts</a>
+                                    <a href="Mid-Year.aspx">Mid-Year Performance</a>
+                                </li>
+								<li>
+                                    <a href="Annual.aspx">Annual Performance</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -439,14 +444,14 @@
                                                 
                                                
                                                <td class="Topcolumn1">
-                                                    <asp:DropDownList ID="drStrategiesResponsiblePerson" runat="server" CssClass="dropdownstyle">
+                                                    <asp:ListBox ID="drStrategiesResponsiblePerson" runat="server" CssClass="dropdownstyle" SelectionMode="Multiple">
                                                         <asp:ListItem>Please Select...</asp:ListItem>
                                                         <asp:ListItem>Municipal Manager</asp:ListItem>
                                                         <asp:ListItem>Mayor</asp:ListItem>
                                                         <asp:ListItem>CFO</asp:ListItem>
                                                         <asp:ListItem>Manager IDP</asp:ListItem>
                                                         <asp:ListItem>Chief Financial Officer</asp:ListItem>
-                                                    </asp:DropDownList>
+                                                    </asp:ListBox>
                                                 </td>
                                             <td class="Topcolumn1">&nbsp;</td>
                                             </tr>

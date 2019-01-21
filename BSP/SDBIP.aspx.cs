@@ -615,10 +615,12 @@ namespace BSP
         }
         protected void BindDatagvMunicipalTransformation()
         {
+            int CurrentYear = DateTime.Today.Year;
+            int NextYear = CurrentYear + 1;
             using (SqlConnection con = new SqlConnection("Data Source = DESKTOP-IG73UCV\\SQLEXPRESS; Database = PerformanceManagement; Integrated Security = SSPI"))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from SDBIP where KPA = 'Municipal Transformation and Organisational Development'", con);
+                SqlCommand cmd = new SqlCommand("select * from SDBIP where KPA = 'Municipal Transformation and Organisational Development' and  StartDate >= CONVERT(datetime, 'july 1 2019') and EndDate <= CONVERT(datetime,'june 30 2020')", con);
 
                 SqlDataReader dr = cmd.ExecuteReader();
                 gvMunicipalTransformation.DataSource = dr;
@@ -639,7 +641,7 @@ namespace BSP
             using (SqlConnection con = new SqlConnection("Data Source = DESKTOP-IG73UCV\\SQLEXPRESS; Database = PerformanceManagement; Integrated Security = SSPI"))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from SDBIP where KPA = 'Spatial Rationale'", con);
+                SqlCommand cmd = new SqlCommand("select * from SDBIP where KPA = 'Spatial Rationale' and  StartDate >= CONVERT(datetime, 'july 1 2019') and EndDate <= CONVERT(datetime,'june 30 2020')", con);
 
                 SqlDataReader dr = cmd.ExecuteReader();
                 gvSpacialRationale.DataSource = dr;
@@ -662,7 +664,7 @@ namespace BSP
             using (SqlConnection con = new SqlConnection("Data Source = DESKTOP-IG73UCV\\SQLEXPRESS; Database = PerformanceManagement; Integrated Security = SSPI"))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from SDBIP where KPA = 'Basic Service Delivery and Infrastructure Development'", con);
+                SqlCommand cmd = new SqlCommand("select * from SDBIP where KPA = 'Basic Service Delivery and Infrastructure Development' and  StartDate >= CONVERT(datetime, 'july 1 2019') and EndDate <= CONVERT(datetime,'june 30 2020')", con);
 
                 SqlDataReader dr = cmd.ExecuteReader();
                 gvBasicService.DataSource = dr;
@@ -683,7 +685,7 @@ namespace BSP
             using (SqlConnection con = new SqlConnection("Data Source = DESKTOP-IG73UCV\\SQLEXPRESS; Database = PerformanceManagement; Integrated Security = SSPI"))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from SDBIP where KPA = 'Local Economic Development'", con);
+                SqlCommand cmd = new SqlCommand("select * from SDBIP where KPA = 'Local Economic Development' and  StartDate >= CONVERT(datetime, 'july 1 2019') and EndDate <= CONVERT(datetime,'june 30 2020')", con);
 
                 SqlDataReader dr = cmd.ExecuteReader();
                 gvLocalEconomic.DataSource = dr;
@@ -704,7 +706,7 @@ namespace BSP
             using (SqlConnection con = new SqlConnection("Data Source = DESKTOP-IG73UCV\\SQLEXPRESS; Database = PerformanceManagement; Integrated Security = SSPI"))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from SDBIP where KPA = 'Municipal Finance Management and Viability'", con);
+                SqlCommand cmd = new SqlCommand("select * from SDBIP where KPA = 'Municipal Finance Management and Viability' and  StartDate >= CONVERT(datetime, 'july 1 2019') and EndDate <= CONVERT(datetime,'june 30 2020')", con);
 
                 SqlDataReader dr = cmd.ExecuteReader();
                 gvMunicipalFinace.DataSource = dr;
@@ -725,7 +727,7 @@ namespace BSP
             using (SqlConnection con = new SqlConnection("Data Source = DESKTOP-IG73UCV\\SQLEXPRESS; Database = PerformanceManagement; Integrated Security = SSPI"))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from SDBIP where KPA = 'Good Governance and Public Participation'", con);
+                SqlCommand cmd = new SqlCommand("select * from SDBIP where KPA = 'Good Governance and Public Participation' and  StartDate >= CONVERT(datetime, 'july 1 2019') and EndDate <= CONVERT(datetime,'june 30 2020')", con);
 
                 SqlDataReader dr = cmd.ExecuteReader();
                 gvGoodGovernance.DataSource = dr;
@@ -1011,7 +1013,6 @@ namespace BSP
         {
             this.BindVillagesByWardNumber();
         }
-
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -1045,7 +1046,6 @@ namespace BSP
                 throw;
             }
         }
-
         protected void btnCancelUpdate_Click(object sender, EventArgs e)
         {
             Response.Redirect("SDBIP.aspx");

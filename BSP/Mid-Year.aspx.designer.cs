@@ -10,7 +10,7 @@
 namespace BSP {
     
     
-    public partial class ProjectPhase {
+    public partial class Mid_Year {
         
         /// <summary>
         /// form1 control.
@@ -31,31 +31,22 @@ namespace BSP {
         protected global::System.Web.UI.WebControls.Label lblPCName;
         
         /// <summary>
-        /// lblMUNICIPALINSTITUTION control.
+        /// gvMidYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMUNICIPALINSTITUTION;
+        protected global::System.Web.UI.WebControls.GridView gvMidYear;
         
         /// <summary>
-        /// gvProjectPhase control.
+        /// tblMidYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvProjectPhase;
-        
-        /// <summary>
-        /// tblProjectPhase control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable tblProjectPhase;
+        protected global::System.Web.UI.HtmlControls.HtmlTable tblMidYear;
         
         /// <summary>
         /// lblIDPDate control.
@@ -67,94 +58,31 @@ namespace BSP {
         protected global::System.Web.UI.WebControls.Label lblIDPDate;
         
         /// <summary>
-        /// txtProjectID control.
+        /// txtDevelopmentObjective control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProjectID;
+        protected global::System.Web.UI.WebControls.TextBox txtDevelopmentObjective;
         
         /// <summary>
-        /// lblIDPDate1 control.
+        /// lblIDPDate0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIDPDate1;
+        protected global::System.Web.UI.WebControls.Label lblIDPDate0;
         
         /// <summary>
-        /// ddlWardNumber control.
+        /// txtKPI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlWardNumber;
-        
-        /// <summary>
-        /// lblIDPDate2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIDPDate2;
-        
-        /// <summary>
-        /// txtProjectName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProjectName;
-        
-        /// <summary>
-        /// lblProjectName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProjectName;
-        
-        /// <summary>
-        /// lblIDPDate3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIDPDate3;
-        
-        /// <summary>
-        /// ddlProjectLocation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlProjectLocation;
-        
-        /// <summary>
-        /// lblIDPDate10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIDPDate10;
-        
-        /// <summary>
-        /// ddlKPA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlKPA;
+        protected global::System.Web.UI.WebControls.TextBox txtKPI;
         
         /// <summary>
         /// lblIDPDate4 control.
@@ -166,13 +94,49 @@ namespace BSP {
         protected global::System.Web.UI.WebControls.Label lblIDPDate4;
         
         /// <summary>
-        /// txtBudget control.
+        /// txtBaseline control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBudget;
+        protected global::System.Web.UI.WebControls.TextBox txtBaseline;
+        
+        /// <summary>
+        /// lblIDPDate2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIDPDate2;
+        
+        /// <summary>
+        /// txtAnualTarget control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAnualTarget;
+        
+        /// <summary>
+        /// lblIDPDate3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIDPDate3;
+        
+        /// <summary>
+        /// txtProjectName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtProjectName;
         
         /// <summary>
         /// lblIDPDate5 control.
@@ -184,13 +148,31 @@ namespace BSP {
         protected global::System.Web.UI.WebControls.Label lblIDPDate5;
         
         /// <summary>
-        /// ddlFundingSource control.
+        /// txtFundingSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFundingSource;
+        protected global::System.Web.UI.WebControls.TextBox txtFundingSource;
+        
+        /// <summary>
+        /// lblIDPDate6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIDPDate6;
+        
+        /// <summary>
+        /// txtBudget control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBudget;
         
         /// <summary>
         /// lblIDPDate7 control.
@@ -211,33 +193,6 @@ namespace BSP {
         protected global::System.Web.UI.WebControls.TextBox txtStartDate;
         
         /// <summary>
-        /// ddlStartDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlStartDate;
-        
-        /// <summary>
-        /// spanIDPDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanIDPDate;
-        
-        /// <summary>
-        /// RVDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RVDate;
-        
-        /// <summary>
         /// lblIDPDate8 control.
         /// </summary>
         /// <remarks>
@@ -256,40 +211,130 @@ namespace BSP {
         protected global::System.Web.UI.WebControls.TextBox txtEndDate;
         
         /// <summary>
-        /// ddlEndDate control.
+        /// lblIDPDate9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEndDate;
+        protected global::System.Web.UI.WebControls.Label lblIDPDate9;
         
         /// <summary>
-        /// span1 control.
+        /// txtAnnualTarget control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl span1;
+        protected global::System.Web.UI.WebControls.TextBox txtAnnualTarget;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// lblIDPDate10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.Label lblIDPDate10;
         
         /// <summary>
-        /// lnkAddProject control.
+        /// ddlAnnualProgress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkAddProject;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAnnualProgress;
+        
+        /// <summary>
+        /// lblIDPDate17 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIDPDate17;
+        
+        /// <summary>
+        /// txtReasonForVariance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtReasonForVariance;
+        
+        /// <summary>
+        /// lblIDPDate18 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIDPDate18;
+        
+        /// <summary>
+        /// txtRemedialAction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRemedialAction;
+        
+        /// <summary>
+        /// lblIDPDate19 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIDPDate19;
+        
+        /// <summary>
+        /// txtPortfolioOfEvidence control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPortfolioOfEvidence;
+        
+        /// <summary>
+        /// lblIDPDate20 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIDPDate20;
+        
+        /// <summary>
+        /// FileUpload1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        
+        /// <summary>
+        /// lblIDPDate21 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIDPDate21;
+        
+        /// <summary>
+        /// txtDepartment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDepartment;
         
         /// <summary>
         /// btnCancel control.
@@ -301,12 +346,12 @@ namespace BSP {
         protected global::System.Web.UI.WebControls.Button btnCancel;
         
         /// <summary>
-        /// btnadd control.
+        /// btnSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnadd;
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }

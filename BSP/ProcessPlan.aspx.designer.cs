@@ -388,7 +388,7 @@ namespace BSP {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drStrategiesResponsiblePerson;
+        protected global::System.Web.UI.WebControls.ListBox drStrategiesResponsiblePerson;
         
         /// <summary>
         /// Label34 control.

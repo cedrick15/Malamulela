@@ -74,17 +74,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Analysis.aspx" />
+    <Content Include="Annual.aspx" />
     <Content Include="bootstrap.css" />
     <Content Include="CommunityBasedPlanning.aspx" />
     <Content Include="Images\ColinsPic.png" />
     <Content Include="Index.aspx" />
+    <Content Include="Mid-Year.aspx" />
     <Content Include="ProcessPlan.aspx" />
     <Content Include="ProjectPhase.aspx" />
+    <Content Include="Quarterly.aspx" />
     <Content Include="RegisterProcessPlan.aspx" />
     <Content Include="sb-admin-2.css" />
     <Content Include="SDBIP.aspx" />
     <Content Include="SearchIDP.aspx" />
+    <Content Include="SearchProcessPlan.aspx" />
     <Content Include="SearchProject.aspx" />
+    <Content Include="SearchSDBIP.aspx" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -95,6 +100,13 @@
     </Compile>
     <Compile Include="Analysis.aspx.designer.cs">
       <DependentUpon>Analysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Annual.aspx.cs">
+      <DependentUpon>Annual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Annual.aspx.designer.cs">
+      <DependentUpon>Annual.aspx</DependentUpon>
     </Compile>
     <Compile Include="CommunityBasedPlanning.aspx.cs">
       <DependentUpon>CommunityBasedPlanning.aspx</DependentUpon>
@@ -109,6 +121,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mid-Year.aspx.cs">
+      <DependentUpon>Mid-Year.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mid-Year.aspx.designer.cs">
+      <DependentUpon>Mid-Year.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProcessPlan.aspx.cs">
       <DependentUpon>ProcessPlan.aspx</DependentUpon>
@@ -125,6 +144,13 @@
       <DependentUpon>ProjectPhase.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quarterly.aspx.cs">
+      <DependentUpon>Quarterly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quarterly.aspx.designer.cs">
+      <DependentUpon>Quarterly.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegisterProcessPlan.aspx.cs">
       <DependentUpon>RegisterProcessPlan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -146,12 +172,26 @@
     <Compile Include="SearchIDP.aspx.designer.cs">
       <DependentUpon>SearchIDP.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SearchProcessPlan.aspx.cs">
+      <DependentUpon>SearchProcessPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchProcessPlan.aspx.designer.cs">
+      <DependentUpon>SearchProcessPlan.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SearchProject.aspx.cs">
       <DependentUpon>SearchProject.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SearchProject.aspx.designer.cs">
       <DependentUpon>SearchProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchSDBIP.aspx.cs">
+      <DependentUpon>SearchSDBIP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchSDBIP.aspx.designer.cs">
+      <DependentUpon>SearchSDBIP.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

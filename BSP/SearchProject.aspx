@@ -73,13 +73,16 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Organizational Per Reports<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Flot Charts</a>
+                                    <a href="Quarterly.aspx">Quarterly Performance</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Morris.js Charts</a>
+                                    <a href="Mid-Year.aspx">Mid-Year Performance</a>
+                                </li>
+								<li>
+                                    <a href="Annual.aspx">Annual Performance</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -120,16 +123,6 @@
 													   <asp:BoundField DataField="SourceofFunds" HeaderText="Source of Funds" />
 													   <asp:BoundField DataField="StartDate" HeaderText="Start Date" />
 													   <asp:BoundField DataField="EndDate" HeaderText="End Date" />
-													   <asp:TemplateField HeaderText="SDBIP" ItemStyle-Width="80px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center">
-                                            <ItemTemplate>
-                                                <asp:LinkButton ID="lnkInvoiceView3" runat="server" CommandName="SDBIP"
-                                                    ForeColor="#339933">SDBIP</asp:LinkButton>
-                                            </ItemTemplate>
-
-<HeaderStyle HorizontalAlign="Center"></HeaderStyle>
-
-<ItemStyle HorizontalAlign="Center" Width="80px"></ItemStyle>
-                                        </asp:TemplateField>
                                     </Columns>
                                                         <HeaderStyle CssClass="gridHeaderStyle"/>
                                             <FooterStyle CssClass="gridFooterStyle" />

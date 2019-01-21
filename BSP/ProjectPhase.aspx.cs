@@ -24,6 +24,28 @@ namespace BSP
             {
                 this.ProjectID();
 
+                int CurrentYear = DateTime.Today.Year;
+                int PreviousYear = DateTime.Today.Year - 1;
+                int NextYear = DateTime.Today.Year + 1;
+
+                string PreYear = PreviousYear.ToString();
+                string NexYear = NextYear.ToString();
+                string CurYear = CurrentYear.ToString();
+                string FinYear = null;
+
+                if (DateTime.Today.Month > 3)
+                    FinYear = CurYear + "-" + NexYear;
+                else
+                    FinYear = PreYear + "-" + CurYear;
+                //return FinYear.Trim();
+                txtStartDate.Text = "1 July";
+                txtEndDate.Text = "30 June";
+                for (int i = 2019; i < DateTime.Now.AddYears(50).Year; i++)
+                {
+                    ddlStartDate.Items.Add(i.ToString());
+                    ddlEndDate.Items.Add(i.ToString());
+                }
+
             }
             else
             {
@@ -71,6 +93,8 @@ namespace BSP
         }
         protected void btnadd_Click(object sender, EventArgs e)
         {
+            int CurrentYear = DateTime.Today.Year;
+            int NextYear = CurrentYear + 1;
             try
             {
                 SqlConnection conn = new SqlConnection("Data Source = DESKTOP-IG73UCV\\SQLEXPRESS; Database = PerformanceManagement; Integrated Security = SSPI"); //Connection String
@@ -89,8 +113,8 @@ namespace BSP
                 commandProject.Parameters.Add("@KeyPerformanceArea", SqlDbType.VarChar).Value = ddlKPA.SelectedValue;
                 commandProject.Parameters.Add("@Budget", SqlDbType.VarChar).Value = txtBudget.Text;
                 commandProject.Parameters.Add("@SourceofFunds", SqlDbType.VarChar).Value = ddlFundingSource.SelectedValue;
-                commandProject.Parameters.Add("@StartDate", SqlDbType.VarChar).Value = txtStartDate.Text;
-                commandProject.Parameters.Add("@EndDate", SqlDbType.VarChar).Value = txtEndDate.Text;
+                commandProject.Parameters.Add("@StartDate", SqlDbType.VarChar).Value = txtStartDate.Text +" "+ ddlStartDate.SelectedValue;
+                commandProject.Parameters.Add("@EndDate", SqlDbType.VarChar).Value = txtEndDate.Text + " " + ddlEndDate.SelectedValue;
                 commandProject.Parameters.Add("@ProjectClassification", SqlDbType.VarChar).Value = "Capital Project";
                 commandProject.ExecuteNonQuery();
                 string ProjectMaxID;
@@ -105,8 +129,8 @@ namespace BSP
                 commandProjectSDPIP.Parameters.Add("@ProjectName", SqlDbType.VarChar).Value = txtProjectName.Text;
                 commandProjectSDPIP.Parameters.Add("@FundingSource", SqlDbType.VarChar).Value = ddlFundingSource.SelectedValue;
                 commandProjectSDPIP.Parameters.Add("@Budget1819R000", SqlDbType.VarChar).Value = "";
-                commandProjectSDPIP.Parameters.Add("@StartDate", SqlDbType.VarChar).Value = txtStartDate.Text;
-                commandProjectSDPIP.Parameters.Add("@EndDate", SqlDbType.VarChar).Value = txtEndDate.Text;
+                commandProjectSDPIP.Parameters.Add("@StartDate", SqlDbType.VarChar).Value = txtStartDate.Text + " " + ddlStartDate.SelectedValue;
+                commandProjectSDPIP.Parameters.Add("@EndDate", SqlDbType.VarChar).Value = txtEndDate.Text + " " + ddlEndDate.SelectedValue;
                 commandProjectSDPIP.Parameters.Add("@FirstQTarget", SqlDbType.VarChar).Value = "";
                 commandProjectSDPIP.Parameters.Add("@SecondQTarget", SqlDbType.VarChar).Value = "";
                 commandProjectSDPIP.Parameters.Add("@ThirdQTarget", SqlDbType.VarChar).Value = "";
@@ -152,34 +176,28 @@ namespace BSP
                     drProjectPhase[4] = ddlKPA.SelectedValue;
                     drProjectPhase[5] = ddlFundingSource.SelectedValue;
 
-                    // String diff2 = (txtEndDate.Text - txtStartDate.Text).TotalDays.ToString();
-                    DateTime CurrentDate = Convert.ToDateTime(txtStartDate.Text);
-                    DateTime EndDate = Convert.ToDateTime(txtEndDate.Text);
-                    TimeSpan Diff = EndDate - CurrentDate;
-                    int Days = Diff.Days;
-
-                    if (Days <= 366)
+                    if (Convert.ToInt32(ddlStartDate.SelectedValue) == CurrentYear)
                     {
                         drProjectPhase[6] = txtBudget.Text;
                     }
-                    else if (Days <= 366 && Days >= 732)
+                    if (Convert.ToInt32(ddlStartDate.SelectedValue) == CurrentYear + 1)
                     {
                         drProjectPhase[7] = txtBudget.Text;
                     }
-                    else if (Days <= 732 && Days >= 1098)
+                    if (Convert.ToInt32(ddlStartDate.SelectedValue) == CurrentYear + 2)
                     {
                         drProjectPhase[8] = txtBudget.Text;
                     }
-                    else if (Days <= 1098 && Days >= 1464)
+                    if (Convert.ToInt32(ddlStartDate.SelectedValue) == CurrentYear + 3)
                     {
                         drProjectPhase[9] = txtBudget.Text;
                     }
-                    else if (Days <=1464 && Days >= 1830)
+                    if (Convert.ToInt32(ddlStartDate.SelectedValue) == CurrentYear + 4)
                     {
                         drProjectPhase[10] = txtBudget.Text;
                     }
 
-                   
+                    
                     dtProjectPhase.Rows.Add(drProjectPhase);
                     Session["dt_ProjectPhase"] = dtProjectPhase;
 
@@ -196,29 +214,23 @@ namespace BSP
                     drProjectPhase[4] = ddlKPA.SelectedValue;
                     drProjectPhase[5] = ddlFundingSource.SelectedValue;
 
-                    // String diff2 = (txtEndDate.Text - txtStartDate.Text).TotalDays.ToString();
-                    DateTime CurrentDate = Convert.ToDateTime(txtStartDate.Text);
-                    DateTime EndDate = Convert.ToDateTime(txtEndDate.Text);
-                    TimeSpan Diff = EndDate - CurrentDate;
-                    int Days = Diff.Days;
-
-                    if (Days <= 366)
+                    if (Convert.ToInt32(ddlStartDate.SelectedValue) == CurrentYear)
                     {
                         drProjectPhase[6] = txtBudget.Text;
                     }
-                    else if (Days <= 366 && Days >= 732)
+                    if (Convert.ToInt32(ddlStartDate.SelectedValue) == CurrentYear + 1)
                     {
                         drProjectPhase[7] = txtBudget.Text;
                     }
-                    else if (Days <= 732 && Days >= 1098)
+                    if (Convert.ToInt32(ddlStartDate.SelectedValue) == CurrentYear + 2)
                     {
                         drProjectPhase[8] = txtBudget.Text;
                     }
-                    else if (Days <= 1098 && Days >= 1464)
+                    if (Convert.ToInt32(ddlStartDate.SelectedValue) == CurrentYear + 3)
                     {
                         drProjectPhase[9] = txtBudget.Text;
                     }
-                    else if (Days <= 1464 && Days >= 1830)
+                    if (Convert.ToInt32(ddlStartDate.SelectedValue) == CurrentYear + 4)
                     {
                         drProjectPhase[10] = txtBudget.Text;
                     }
@@ -256,6 +268,16 @@ namespace BSP
         protected void lnkAddProject_Click(object sender, EventArgs e)
         {
             tblProjectPhase.Visible = true;
+            this.ProjectID();
+            ddlWardNumber.ClearSelection();
+            txtProjectName.Text = null;
+            ddlProjectLocation.ClearSelection();
+            ddlKPA.ClearSelection();
+            txtBudget.Text = null;
+            ddlFundingSource.ClearSelection();
+            ddlStartDate.ClearSelection();
+            ddlEndDate.ClearSelection();
+
         }
 
         protected void txtProjectName_TextChanged(object sender, EventArgs e)

@@ -64,13 +64,16 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Organizational Per Reports<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Flot Charts</a>
+                                    <a href="Quarterly.aspx">Quarterly Performance</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Morris.js Charts</a>
+                                    <a href="Mid-Year.aspx">Mid-Year Performance</a>
+                                </li>
+								<li>
+                                    <a href="Annual.aspx">Annual Performance</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -285,7 +288,11 @@
                                                 <td class="Topcolumn1"><asp:Label ID="lblIDPDate7" runat="server" Text="Start Date" CssClass="labelstyle"></asp:Label></td>
                                                 
                                                
-                                               <td class="Topcolumn1"><asp:TextBox ID="txtStartDate" runat="server"  CssClass="textboxstyle" TextMode="Date"></asp:TextBox></td>
+                                               <td class="Topcolumn1"><asp:TextBox ID="txtStartDate" runat="server"  CssClass="textboxstyle" Enabled="False" Width="180px"></asp:TextBox>
+                                                    <asp:DropDownList ID="ddlStartDate" runat="server" CssClass="dropdownstyle" AutoPostBack="True" Height="25px" Width="140px">
+                                                        <asp:ListItem>Please Select...</asp:ListItem>
+                                                    </asp:DropDownList>
+                                                </td>
                                             <td class="Topcolumn1">
 												<span runat="server" id="spanIDPDate" class="spanstyle">*</span>
                                                 <asp:RequiredFieldValidator ID="RVDate" runat="server" ControlToValidate="txtStartDate" ErrorMessage="Date Cannot be Blank" InitialValue="" Font-Bold="True" Font-Names="Arial" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -298,7 +305,11 @@
                                                 <td class="Topcolumn1"><asp:Label ID="lblIDPDate8" runat="server" Text="End Date" CssClass="labelstyle"></asp:Label></td>
                                                 
                                                
-                                               <td class="Topcolumn1"><asp:TextBox ID="txtEndDate" runat="server"  CssClass="textboxstyle" TextMode="Date"></asp:TextBox></td>
+                                               <td class="Topcolumn1"><asp:TextBox ID="txtEndDate" runat="server"  CssClass="textboxstyle" Enabled="False" Width="180px"></asp:TextBox>
+                                                    <asp:DropDownList ID="ddlEndDate" runat="server" CssClass="dropdownstyle" AutoPostBack="True" Height="25px" Width="140px">
+                                                        <asp:ListItem>Please Select...</asp:ListItem>
+                                                    </asp:DropDownList>
+                                                </td>
                                             <td class="Topcolumn1"><span runat="server" id="span1" class="spanstyle">*</span>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEndDate" ErrorMessage="Date Cannot be Blank" InitialValue="" Font-Bold="True" Font-Names="Arial" ForeColor="Red"></asp:RequiredFieldValidator>
 </td>
